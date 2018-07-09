@@ -127,7 +127,16 @@ just("Some String") // Computation
  à compléter  
 
 ---
- ## Migration des alertes avec RxJava2
+## Migration des alertes avec RxJava2
 #### Process de migration : 
+
+---
+## Création d'un Objet Flowable
+to do 
+
+---
+## Parallélisme du traitement des Alertes
+todo 
+
 ---
  
