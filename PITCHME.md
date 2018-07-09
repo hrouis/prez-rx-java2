@@ -41,3 +41,20 @@ Observable<User> userObservable = Observable.create(new Observable.OnSubscribe<U
         });
 ```
 ---
+
+Une fois nos opérations longues terminées, nous souhaitons récupérer le résultat, pour cela nous utiliserons des Subscribe  
+
+```java
+userObservable.subscribe(new Subscriber<User>(){
+     public void onNext(Object result) {
+         //appelée à chaque fois que l'observable reçoit un objet User
+     }
+ 
+     public void onComplete() {
+         //appelée lorsque l'observable a finit d'envoyer l'ensemble des objets User
+     }
+ 
+     public void onError(Throwable error) {
+     }
+});
+```
