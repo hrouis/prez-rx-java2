@@ -41,7 +41,7 @@ Observable<User> userObservable = Observable.create(new Observable.OnSubscribe<U
         });
 ```
 ---
-
+@div[left-50]
 Une fois nos opérations longues terminées, nous souhaitons récupérer le résultat, pour cela nous utiliserons des Subscribe  
 
 ```java
