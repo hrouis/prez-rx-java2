@@ -111,8 +111,7 @@ just("Some string")  //UI
 @[4-5](Exécution du code dans le thread de calcul)
 ___
 
-## Parallélisme dans RxJava 2.0
-#### SubscribeOn:
+## SubscribeOn:
 Cette opération affecte le thread responsable de la souscription à l'observable.
 ```java
 just("Some String") // Computation
