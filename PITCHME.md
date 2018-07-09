@@ -1,5 +1,5 @@
 @title[Introduction]
----?image=assets/logo.png 
+![logo](assets/logo.png) 
 
 ## @color[#cc6699](RxJava 2.0)
 Reactive Extensions for the JVM
