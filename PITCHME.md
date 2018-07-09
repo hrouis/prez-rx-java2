@@ -85,3 +85,12 @@ RxJava2 implémente cette spécification.
 ---
 ## Types d'Observables
 
+| Type         | Cas d'usage                                       |
+|--------------|---------------------------------------------------|
+| *Single*     | Opération asynchrone qui retourne 1 résultat      |
+| *Maybe*      | Opération asynchrone qui retourne 0 ou 1 résultat |
+| *Completable* | Opération asynchrone qui ne retourne aucun résultat. Indique la fin d'observation. | 
+| *Observable* | Séquence de données sans contre-pression |
+| *Flowable*| Séquence de données avec contre-pression |
+
+---
