@@ -24,7 +24,7 @@ RxJava est basé sur le patron de conception Observateur :
 L'objet observé envoie un signal à des composants qui jouent le rôle d'observateurs.  
  En cas de notification, les observateurs effectuent alors l'action adéquate en fonction des informations qui parviennent depuis les modules qu'ils observent.  
  
- ![observer_pattern](assets/images/observer.png)   
+![observer_pattern](assets/images/observer.png)   
 
 ---
 Un Observable peux être compris comme un Runnable, il va contenir une méthode qui va être executé dans un Thread différent.
