@@ -20,7 +20,10 @@ service.getData(dataA -> {
  * Future : Peuvent bloquer le code trop tôt ( appel à la méthode get) 
 ---
 
-RxJava est basé sur le patron de conception Observable :
+RxJava est basé sur le patron de conception Observable :   
+
+Un Observable peux être compris comme un Runnable, il va contenir une méthode qui va être executé dans un Thread différent.
+
 
 ```java
 Observable<User> userObservable = Observable.create(new Observable.OnSubscribe<User>() {
