@@ -110,6 +110,7 @@ just("Some string")  //UI
 @[3](Modification du thread d'exécution)
 @[4-5](Exécution du code dans le thread de calcul)
 ___
+
 ## Parallélisme dans RxJava 2.0
 ####SubscribeOn:
 Cette opération affecte le thread responsable de la souscription à l'observable.
@@ -119,15 +120,14 @@ just("Some String") // Computation
   .map(length -> 2 * length) // Computation
   .subscribeOn(Schedulers.computation()) // -- changing the thread
   .subscribe(number -> Log.d("", "Number " + number));// Computation
- ```
- ---
- ## Parallélisme avec flatMap et groupBy
-
-
- ---
+ ```   
+---
+ ## Parallélisme avec flatMap et groupBy  
  
+ à compléter  
+
+---
  ## Migration des alertes avec RxJava2
-#### Process de migration :
- 
- ---
+#### Process de migration : 
+---
  
