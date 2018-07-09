@@ -72,3 +72,4 @@ entre ses composants afin de profiter de l'élasticité et  de la répartition d
 Une initiative qui essaye de normaliser le traitement asynchrone des flux avec une contre-pression non bloquante.  
 
 ![ractive](assets/images/reactive-streams-communication-flow.png)
+---
