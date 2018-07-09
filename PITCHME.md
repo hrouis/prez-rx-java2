@@ -6,7 +6,7 @@ Reactive Extensions for the JVM
 ---
 
 RxJava offre une manière élégante pour implémenter du code asynchrone.
-Callback : Complxité dans l'enchainement de callBack 
+* Callback : Complexité dans l'enchainement de callBack (Callback Hell)
 
 ```java
 service.getData(dataA -> {
@@ -17,5 +17,24 @@ service.getData(dataA -> {
     });        
 });
 ```
-
+ * Future : Peuvent bloquer le code trop tôt ( appel à la méthode get) 
 ---
+
+RxJava est basé sur le patron de conception Observable :
+
+```java
+Observable<User> userObservable = Observable.create(new Observable.OnSubscribe<User>() {
+            @Override
+            public void call(Subscriber<? super Object> subscriber) {
+                 
+                //je peux par exemple faire un appel reseau bloquant
+                User user = webservice.getUser("florent37");
+ 
+                //une fois l'objet récupéré, il faut l'envoyer au notifieur,
+                subscriber.onNext(user);
+ 
+                //puis dire au notifieur que nous avons finit
+                subscriber.onCompleted();
+            }
+        });
+```
