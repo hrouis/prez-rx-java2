@@ -68,3 +68,7 @@ https://www.reactivemanifesto.org/fr
 - Orientés messages (message-driven) : Le système utilise le passage de message asynchrones
 entre ses composants afin de profiter de l'élasticité et  de la répartition des charges en appliquant la contre-pression ( back-pressure=)
 ---
+## Reactive Streams
+Une initiative qui essaye de normaliser le traitement asynchrone des flux avec une contre-pression non bloquante.  
+
+![ractive](assets/images/reactive-streams-communication-flow.png)
