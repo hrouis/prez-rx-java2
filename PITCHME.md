@@ -95,7 +95,7 @@ RxJava2 implémente cette spécification.
 
 ---
 ## Parallélisme dans RxJava 2.0
-####ObserveOn:
+#### ObserveOn:
 Cette opération modifie le thread d'exécution de tout les méthodes qui la succèdent.  
 
 ```java
@@ -112,7 +112,7 @@ just("Some string")  //UI
 ___
 
 ## Parallélisme dans RxJava 2.0
-####SubscribeOn:
+#### SubscribeOn:
 Cette opération affecte le thread responsable de la souscription à l'observable.
 ```java
 just("Some String") // Computation
@@ -120,7 +120,7 @@ just("Some String") // Computation
   .map(length -> 2 * length) // Computation
   .subscribeOn(Schedulers.computation()) // -- changing the thread
   .subscribe(number -> Log.d("", "Number " + number));// Computation
- ```   
+ ```
 ---
  ## Parallélisme avec flatMap et groupBy  
  
