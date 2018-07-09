@@ -79,3 +79,9 @@ RxJava2 implémente cette spécification.
 
 ![ractive](assets/images/reactive-streams-communication-flow.png)
 ---
+## Contre Pression (Back-pressure)
+![back-pressure](assets/images/backpressure.jpg)
+
+---
+## Types d'Observables
+
