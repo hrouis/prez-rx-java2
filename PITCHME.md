@@ -85,12 +85,26 @@ RxJava2 implémente cette spécification.
 ---
 ## Types d'Observables
 
-| Type         | Cas d'usage                                       |
-|--------------|---------------------------------------------------|
-| *Single*     | Opération asynchrone qui retourne 1 résultat      |
-| *Maybe*      | Opération asynchrone qui retourne 0 ou 1 résultat |
+| Type          | Cas d'usage                                       |
+|---------------|---------------------------------------------------|
+| *Single*      | Opération asynchrone qui retourne 1 résultat      |
+| *Maybe*       | Opération asynchrone qui retourne 0 ou 1 résultat |
 | *Completable* | Opération asynchrone qui ne retourne aucun résultat. Indique la fin d'observation. | 
-| *Observable* | Séquence de données sans contre-pression |
-| *Flowable*| Séquence de données avec contre-pression |
+| *Observable*  | Séquence de données sans contre-pression |
+| *Flowable*    | Séquence de données avec contre-pression |
 
 ---
+## Parallélisme dans RxJava 2.0
+####ObserveOn:
+Cette opération modifie le thread d'exécution de tout les méthodes qui la succèdent.  
+
+```java
+just("Some string")  //UI
+ .map(str -> str.length()) //UI
+ .observeOn(Schedulers.computation) // changing the thread
+ .map(length -> é * length) // Computation
+ .subscribe(number -> log.debug("Number {}", number)); // Computation
+```
+@[1-2](Exécuiton du code dans le thread de l'interface utilisateur)
+@[3](Modification du thread d'exécution)
+@[4-5](Exécution du code dans le thread de calcul)
