@@ -20,8 +20,13 @@ service.getData(dataA -> {
  * Future : Peuvent bloquer le code trop tôt ( appel à la méthode get) 
 ---
 
-RxJava est basé sur le patron de conception Observable :   
+RxJava est basé sur le patron de conception Observateur :
+L'objet observé envoie un signal à des composants qui jouent le rôle d'observateurs.  
+ En cas de notification, les observateurs effectuent alors l'action adéquate en fonction des informations qui parviennent depuis les modules qu'ils observent.  
+ 
+ ![observer_pattern](assets/images/observer.png)   
 
+---
 Un Observable peux être compris comme un Runnable, il va contenir une méthode qui va être executé dans un Thread différent.
 
 ```java
@@ -70,6 +75,7 @@ entre ses composants afin de profiter de l'élasticité et  de la répartition d
 ---
 ## Reactive Streams
 Une initiative qui essaye de normaliser le traitement asynchrone des flux avec une contre-pression non bloquante.  
+RxJava2 implémente cette spécification.
 
 ![ractive](assets/images/reactive-streams-communication-flow.png)
 ---
