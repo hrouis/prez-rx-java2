@@ -98,13 +98,14 @@ RxJava2 implémente cette spécification.
 ####ObserveOn:
 Cette opération modifie le thread d'exécution de tout les méthodes qui la succèdent.  
 
-
+```java
 just("Some string")  //UI
  .map(str -> str.length()) //UI
  .observeOn(Schedulers.computation) // changing the thread
  .map(length -> é * length) // Computation
  .subscribe(number -> log.debug("Number {}", number)); // Computation
- 
+```
+
 @[1-2](Exécuiton du code dans le thread de l'interface utilisateur)
 @[3](Modification du thread d'exécution)
 @[4-5](Exécution du code dans le thread de calcul)
