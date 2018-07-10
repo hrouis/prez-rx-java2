@@ -146,6 +146,7 @@ just("Some String") // Computation
 +++
  ### Parallélisme avec flatMap et groupBy  
  #### GroupBy
+ Cette méthode regroupe les éléments émis par un *Observable* suivant un critère de sélection spécifique  
  
 ![groupBy](assets/images/groupBy.png)  
 
