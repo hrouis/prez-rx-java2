@@ -33,7 +33,7 @@ Observable<User> userObservable = Observable.create(new Observable.OnSubscribe<U
             public void call(Subscriber<? super Object> subscriber) {
                  
                 //je peux par exemple faire un appel reseau bloquant
-                User user = webservice.getUser("florent37");
+                User user = webservice.getUser("toto");
  
                 //une fois l'objet récupéré, il faut l'envoyer au notifieur,
                 subscriber.onNext(user);
@@ -94,7 +94,24 @@ entre ses composants afin de profiter de l'élasticité et  de la répartition d
 | @size[0.6em](*Observable*)  | @size[0.6em](Séquence de données sans contre-pression) |
 | @size[0.6em](*Flowable*)    | @size[0.6em](Séquence de données avec contre-pression) |
 
+   
 ---
+### Parallélisme dans RxJava 2.0
+#### Schedulers
+@size[0.6em](Les Schedulers permettent de lancer les opérations des *Observables* sur des threads différents.)
+
+| Type                        | Cas d'usage                                                    |
+|-----------------------------|----------------------------------------------------------------|
+| @size[0.6em](*IO*)      | @size[0.6em](Utilisé pour les opération I/O  : requêtes réseau, opération FS)     |
+| @size[0.6em](*Computation *)       | @size[0.6em](Opération asynchrone qui retourne 0 ou 1 résultat) |
+| @size[0.6em](*NewThread *) | @size[0.6em](Opération asynchrone qui ne retourne aucun résultat. Indique la fin d'observation.) | 
+| @size[0.6em](*Single *)  | @size[0.6em](Séquence de données sans contre-pression) |
+| @size[0.6em](*Immediate *)    | @size[0.6em](Séquence de données avec contre-pression) |
+| @size[0.6em](*Trampoline*)    | @size[0.6em](Séquence de données avec contre-pression) |
+| @size[0.6em](*Executor Scheduler*)    | @size[0.6em](Séquence de données avec contre-pression) |
+
+
++++
 ### Parallélisme dans RxJava 2.0
 #### ObserveOn:
 Cette opération modifie le thread d'exécution de tout les méthodes qui la succèdent.  
@@ -122,6 +139,7 @@ just("Some String") // Computation
   .subscribeOn(Schedulers.computation()) // -- changing the thread
   .subscribe(number -> Log.d("", "Number " + number));// Computation
  ```
+
 +++
  ### Parallélisme avec flatMap et groupBy  
  #### GroupBy
