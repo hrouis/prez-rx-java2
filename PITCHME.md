@@ -70,6 +70,9 @@ https://www.reactivemanifesto.org/fr
 - Disponible : Le système répond rapidement en toutes circonstances.
 - Résilient : Le système reste disponible en cas d'erreur.
 - Souple : Le système reste disponible indépendemment de la charge de travail
+
++++
+
 - Orientés messages (message-driven) : Le système utilise le passage de message asynchrones
 entre ses composants afin de profiter de l'élasticité et  de la répartition des charges en appliquant la contre-pression ( back-pressure=)
 +++
