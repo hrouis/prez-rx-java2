@@ -160,9 +160,9 @@ just("Some String") // Computation
 ---
 ### Migration des alertes avec RxJava2
 #### Processus de migration : 
- La migration des alertes consiste à transformer les alertes Deveryloc  du XML vers Json.  
+   @size[1em](La migration des alertes consiste à transformer les alertes Deveryloc  du XML vers Json.)
  
- Le processus de migration : 
+   @size[0.7em](Le processus de migration :) 
    - @size[0.7em](Lecture des coordonnées clients à partir d'un fichier CSV.)
    - @size[0.7em](Création de l'api Deverygo et lecture de l'UO des alertes depuis Geohub)
    - @size[0.7em](Transformation de l'UO des alertes en Json)
