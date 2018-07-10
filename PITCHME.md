@@ -290,16 +290,17 @@ private BiConsumer<BufferedReader, Emitter<String>> fileConsumer()
 </div>
 
 ```java
+private int threadCount = Runtime.getRuntime().availableProcessors();
 
- private int threadCount = Runtime.getRuntime().availableProcessors();
- ExecutorService threadPoolExecutor = Executors.newFixedThreadPool(threadCount);
- Scheduler scheduler = Schedulers.from(threadPoolExecutor);
+public static void main (String[] args) {
+ExecutorService threadPoolExecutor = Executors.newFixedThreadPool(threadCount);
+Scheduler scheduler = Schedulers.from(threadPoolExecutor);
 
- file.groupBy(groupIndex())
- .flatMap(mapper(scheduler))
- .doOnComplete(onComplete())
- .blockingIterable();
-                
+file.groupBy(groupIndex())
+.flatMap(mapper(scheduler))
+.doOnComplete(onComplete())
+.blockingIterable();
+}
 private Function<String, Integer> groupIndex()
 {
     return new Function<String, Integer>() {
