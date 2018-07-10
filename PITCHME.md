@@ -64,7 +64,7 @@ userObservable.subscribe(new Subscriber<User>(){
 });
 ```
 ---
-## Le Manifeste Réactif  
+@title[Le Manifeste Réactif]  
 https://www.reactivemanifesto.org/fr
 
 - Disponible : Le système répond rapidement en toutes circonstances.
