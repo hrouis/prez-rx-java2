@@ -6,7 +6,7 @@ logo : assets/images/logo.png
 
 theme-override : assets/css/PITCHME.css
 
-transition : zoom
+transition : convex
 
 highlight : ir-black
 
