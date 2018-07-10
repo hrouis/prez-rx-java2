@@ -283,7 +283,7 @@ private BiConsumer<BufferedReader, Emitter<String>> fileConsumer()
 </div>
  
 +++
-### PArallélisme inter-process 
+### Parallélisme inter-process 
 <div style="text-align: left">
 @size[0.75em] Utilisation de grpouBy et flatMap  
 
@@ -317,7 +317,36 @@ private Function<String, Integer> groupIndex()
 @[11-21]( méthode groupIndex qui implémente la méthode critère de sélection, ici une répartition itérative )
 
 +++
+### Souscription au Scheduler spécifique
 
+```java
+private Function<GroupedFlowable<Integer, String>, Publisher<List<Integer>>> mapper(final Scheduler scheduler)
+    {
+        return new Function<GroupedFlowable<Integer, String>, Publisher<List<Integer>>>() {
+            @Override
+            public Publisher<List<Integer>> apply(GroupedFlowable<Integer, String> group) throws Exception
+            {
+                return group.observeOn(scheduler).toList().map(listMapper()).toFlowable();
+            }
+
+            private Function<List<String>, List<Integer>> listMapper()
+            {
+                return new Function<List<String>, List<Integer>>() {
+                    @Override
+                    public List<Integer> apply(List<String> strings) throws Exception
+                    {
+                        List<Integer> intList = new ArrayList<Integer>();
+                        for (String line : strings) {
+                            int result = merge().apply(line);
+                            intList.add(result);
+                        }
+                        return intList;
+                    }
+                };
+            }
+        };
+    }
+```
 
 
 
