@@ -170,12 +170,12 @@ just("Some String") // Computation
  
 +++
 @div[left-50]  
-#### Problème  
+ @size[1.5em](Problème)  
  - Le batch de migration doit être implémenté en Java 6 ( à cause de la dépendance Xstream)
 @divend
 
 @div[right-50]  
-#### Solution
+@size[1.5em](Solution)
 ![weeping](assets/images/weeping.jpg)   
 @divend
 +++
