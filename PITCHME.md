@@ -153,7 +153,7 @@ just("Some String") // Computation
 +++
  ### Parallélisme avec flatMap et groupBy  
  #### FlatMap
-  @size[0.7em](FlatMap prends chaque élément de chaque stream et  lui applique une transformation ( la partie *map* ) , ensuite elle va combiner tous les streams dans un stream destination ( la partie *flat* ) ) 
+  @size[0.7em](FlatMap prends chaque élément de chaque stream et  lui applique une transformation  [la partie *map* ] , ensuite elle va combiner tous les streams dans un stream destination [ la partie *flat*] ) 
 ![flatMap](assets/images/flatMap.png)  
 
 ---
