@@ -287,13 +287,14 @@ private BiConsumer<BufferedReader, Emitter<String>> fileConsumer()
 <div style="text-align: left">
 @size[1em] Utilisation de grpouBy et flatMap  
 
+</div>
+
 ```java
 file.groupBy(groupIndex())
                 .flatMap(deleteMapper(scheduler))
                 .doOnComplete(onComplete())
                 .blockingIterable();
-```  
-
+                
 private Function<String, Integer> groupIndex()
 {
     return new Function<String, Integer>() {
@@ -305,6 +306,5 @@ private Function<String, Integer> groupIndex()
         }
     };
 }
+```  
 
-
-</div>
