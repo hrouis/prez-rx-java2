@@ -18,7 +18,7 @@ service.getData(dataA -> {
 });
 ```
  * Future : Peuvent bloquer le code trop tôt ( appel à la méthode get) 
----
++++
 
 RxJava est basé sur le patron de conception Observateur :
 L'objet observé envoie un signal à des composants qui jouent le rôle d'observateurs.  
@@ -26,7 +26,7 @@ L'objet observé envoie un signal à des composants qui jouent le rôle d'observ
  
 ![observer_pattern](assets/images/observer.png)   
 
----
++++
 Un Observable peux être compris comme un Runnable, il va contenir une méthode qui va être executé dans un Thread différent.
 
 ```java
@@ -45,7 +45,7 @@ Observable<User> userObservable = Observable.create(new Observable.OnSubscribe<U
             }
         });
 ```
----
++++
 @div[left-100]
 Une fois nos opérations longues terminées, nous souhaitons récupérer le résultat, pour cela nous utiliserons des Subscribe  
 @divend
@@ -72,17 +72,17 @@ https://www.reactivemanifesto.org/fr
 - Souple : Le système reste disponible indépendemment de la charge de travail
 - Orientés messages (message-driven) : Le système utilise le passage de message asynchrones
 entre ses composants afin de profiter de l'élasticité et  de la répartition des charges en appliquant la contre-pression ( back-pressure=)
----
++++
 ## Reactive Streams
 Une initiative qui essaye de normaliser le traitement asynchrone des flux avec une contre-pression non bloquante.  
 RxJava2 implémente cette spécification.
 
 ![ractive](assets/images/reactive-streams-communication-flow.png)
----
++++
 ## Contre Pression (Back-pressure)
 ![back-pressure](assets/images/backpressure.jpg)
 
-+++
+---
 ## Types d'Observables
 
 | Type          | Cas d'usage                                       |
@@ -110,7 +110,7 @@ just("Some string")  //UI
 @[3](Modification du thread d'exécution)
 @[4-5](Exécution du code dans le thread de calcul)  
 
----
++++
 ## Parallélisme dans RxJava 2.0
 #### SubscribeOn:
 Cette opération affecte le thread responsable de la souscription à l'observable.
@@ -121,22 +121,22 @@ just("Some String") // Computation
   .subscribeOn(Schedulers.computation()) // -- changing the thread
   .subscribe(number -> Log.d("", "Number " + number));// Computation
  ```
----
++++
  ## Parallélisme avec flatMap et groupBy  
  #### GroupBy
  
 ![groupBy](assets/images/groupBy.png)
+
 ---
 ## Migration des alertes avec RxJava2
 #### Process de migration : 
 
----
++++
 ## Création d'un Objet Flowable
 to do 
 
----
++++
 ## Parallélisme du traitement des Alertes
 todo 
 
----
  
