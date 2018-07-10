@@ -125,9 +125,8 @@ just("Some String") // Computation
 +++
  ### Parallélisme avec flatMap et groupBy  
  #### GroupBy
- toto titi 
  
----?image=assets/images/groupBy.png&size=contain
+![groupBy](assets/images/groupBy.png)
 
 ---
 ### Migration des alertes avec RxJava2
