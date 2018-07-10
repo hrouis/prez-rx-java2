@@ -173,9 +173,8 @@ just("Some String") // Computation
  - Le batch de migration doit être implémenté en Java 6 ( à cause de la dépendance Xstream)
 @divend
 @div[right-50]
-![weeping](assets/images/weeping.jpg) 
- 
- 
+![weeping](assets/images/weeping.jpg)   
+
  +++
  #### Problèmes  
  
