@@ -20,7 +20,7 @@ service.getData(dataA -> {
  * Future : Peuvent bloquer le code trop tôt ( appel à la méthode get) 
 +++
 
-@size[0.4em]()RxJava est basé sur le patron de conception Observateur : L'objet observé envoie un signal à des composants qui jouent le rôle d'observateurs. En cas de notification, les observateurs effectuent alors l'action adéquate en fonction des informations qui parviennent depuis les modules qu'ils observent.)  
+@size[0.4em](RxJava est basé sur le patron de conception Observateur : L'objet observé envoie un signal à des composants qui jouent le rôle d'observateurs. En cas de notification, les observateurs effectuent alors l'action adéquate en fonction des informations qui parviennent depuis les modules qu'ils observent.)  
  
 ![observer_pattern](assets/images/observer.png)   
 
