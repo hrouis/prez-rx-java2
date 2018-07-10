@@ -213,7 +213,9 @@ just("Some String") // Computation
             }
         });
     }
-```
+```  
+@[6-13](Appel de l'api Deverygo et récupération du UserObject)
+@[1-4](Encapsulation de l'appel asynchrone par la création d'une Observable du type Maybe)
 
 +++  
 ### Création d'un Objet Flowable
