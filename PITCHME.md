@@ -82,7 +82,7 @@ RxJava2 implémente cette spécification.
 ## Contre Pression (Back-pressure)
 ![back-pressure](assets/images/backpressure.jpg)
 
----
++++
 ## Types d'Observables
 
 | Type          | Cas d'usage                                       |
