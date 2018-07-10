@@ -103,7 +103,7 @@ entre ses composants afin de profiter de l'élasticité et  de la répartition d
 | Type                        | Cas d'usage                                                    |
 |-----------------------------|----------------------------------------------------------------|
 | @size[0.5em](*IO*)      | @size[0.5em](Utilisé pour les opération I/O  : requêtes réseau, opération FS)     |
-| @size[0.5em](*Computation *)       | @size[0.5em](Le nombre de thread dépend du nombre de coeurs de la machine : mobile, serveur ..., optimisé pour les calculs rapides.|
+| @size[0.5em](*Computation *)       | @size[0.5em](Le nombre de thread dépend du nombre de coeurs de la machine : mobile, serveur ..., optimisé pour les calculs rapides.)|
 | @size[0.5em](*NewThread *) | @size[0.5em](Création d'un nouveau thread sans recyclage, à utilser avec modération.) | 
 +++  
 
