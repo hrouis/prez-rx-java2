@@ -337,7 +337,7 @@ private Function<GroupedFlowable<Integer, String>, Publisher<List<Integer>>> map
                     {
                         List<Integer> intList = new ArrayList<Integer>();
                         for (String line : strings) {
-                            int result = merge().apply(line);
+                            int result = merge(line);
                             intList.add(result);
                         }
                         return intList;
@@ -346,7 +346,9 @@ private Function<GroupedFlowable<Integer, String>, Publisher<List<Integer>>> map
             }
         };
     }
-```
+```  
+@[7](Utilisation de la méthode observeOn pour lancer le traitement sur le scheduler)
+@[18](Lancer le traitement pour la ligne du fichier)
 
 
 
