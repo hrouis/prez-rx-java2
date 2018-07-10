@@ -179,9 +179,10 @@ just("Some String") // Computation
 ![weeping](assets/images/weeping.jpg)   
 @divend
 +++
- #### Problèmes et solutions
+ @size[1.5em](Problème) 
 
   @size[0.7em](Les appels à Geohub en lecture et écriture sont bloquants.)
+   @size[1.5em](Solution) 
   @size[0.7em](La solution est d'encapsuler l'api bloquante dans une api *réactive*)
 
 
