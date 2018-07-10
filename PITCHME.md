@@ -285,7 +285,8 @@ private BiConsumer<BufferedReader, Emitter<String>> fileConsumer()
 +++
 ### PArallélisme inter-process 
 <div style="text-align: left">
-@size[1em] Utilisation de grpouBy et flatMap
+@size[1em] Utilisation de grpouBy et flatMap  
+
 ```java
 file.groupBy(groupIndex())
                 .flatMap(deleteMapper(scheduler))
