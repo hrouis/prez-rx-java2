@@ -4,7 +4,9 @@
 ## @color[#cc6699](RxJava 2.0)
 Reactive Extensions for the JVM
 ---
+![meme](assets/images/meme.jpg)
 
+---
 RxJava offre une manière élégante pour implémenter du code asynchrone.
 * Callback : Complexité dans l'enchainement de callBack (Callback Hell)
 
