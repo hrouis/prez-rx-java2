@@ -17,5 +17,3 @@ charts : true
 mathjax : TeX-AMS_HTML-full
 
 published : true
-
-rtl : true
