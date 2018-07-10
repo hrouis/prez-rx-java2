@@ -88,11 +88,11 @@ entre ses composants afin de profiter de l'élasticité et  de la répartition d
 
 | Type                        | Cas d'usage                                                    |
 |-----------------------------|----------------------------------------------------------------|
-| @size[0.5em](*Single*)      | @size[0.5em](Opération asynchrone qui retourne 1 résultat)     |
-| *Maybe*       | Opération asynchrone qui retourne 0 ou 1 résultat |
-| *Completable* | Opération asynchrone qui ne retourne aucun résultat. Indique la fin d'observation. | 
-| *Observable*  | Séquence de données sans contre-pression |
-| *Flowable*    | Séquence de données avec contre-pression |
+| @size[0.6em](*Single*)      | @size[0.6em](Opération asynchrone qui retourne 1 résultat)     |
+| @size[0.6em](*Maybe*)       | @size[0.6em](Opération asynchrone qui retourne 0 ou 1 résultat) |
+| @size[0.6em](*Completable*) | @size[0.6em](Opération asynchrone qui ne retourne aucun résultat. Indique la fin d'observation.) | 
+| @size[0.6em](*Observable*)  | @size[0.6em](Séquence de données sans contre-pression) |
+| @size[0.6em](*Flowable*)    | @size[0.6em](Séquence de données avec contre-pression) |
 
 ---
 ### Parallélisme dans RxJava 2.0
