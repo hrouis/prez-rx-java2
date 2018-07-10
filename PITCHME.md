@@ -290,10 +290,15 @@ private BiConsumer<BufferedReader, Emitter<String>> fileConsumer()
 </div>
 
 ```java
-file.groupBy(groupIndex())
-                .flatMap(deleteMapper(scheduler))
-                .doOnComplete(onComplete())
-                .blockingIterable();
+
+ private int threadCount = Runtime.getRuntime().availableProcessors();
+ ExecutorService threadPoolExecutor = Executors.newFixedThreadPool(threadCount);
+ Scheduler scheduler = Schedulers.from(threadPoolExecutor);
+
+ file.groupBy(groupIndex())
+ .flatMap(mapper(scheduler))
+ .doOnComplete(onComplete())
+ .blockingIterable();
                 
 private Function<String, Integer> groupIndex()
 {
