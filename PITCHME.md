@@ -189,9 +189,9 @@ just("Some String") // Computation
 
 | @size[0.5em](Type d'opération)            | @size[0.5em](Signature synchrone)   | @size[0.5em](Signature Rx) | @size[0.5em](Example d'utilisation) |
 |-----------------------------|-----------------------|--------------|------------------------|
-| @size[0.5em](Opération qui ne retroune aucun résultat)  | @size[0.5em](`void x()`) | @size[0.5em](Completable x()) | @size[0.5em](`flush()`) |
-| @size[0.5em](Opération qui retourne un seul résultat)   | @size[0.5em](T x`()`) | @size[0.5em](Single<T> x`()`) | @size[0.5em](get`()`) |
-| @size[0.5em](Opération qui retourne 0  *null* ou 1 résultat)    | @size[0.5em](T x`() ou Optional<T> x()`) | @size[0.5em](Maybe<T> x`() ou Single<Optional<T>> x()`) | @size[0.5em](get`()`) |
+| @size[0.5em](Opération qui ne retroune aucun résultat)  | @size[0.5em](void x) | @size[0.5em](Completable x) | @size[0.5em](flush) |
+| @size[0.5em](Opération qui retourne un seul résultat)   | @size[0.5em](T x) | @size[0.5em](Single<T> x) | @size[0.5em](get) |
+| @size[0.5em](Opération qui retourne 0  *null* ou 1 résultat)    | @size[0.5em](T x) | @size[0.5em](Maybe<T> x ou Single<Optional<T>> x) | @size[0.5em](get) |
 
 +++
 ### Création d'un Objet Flowable
