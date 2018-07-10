@@ -273,9 +273,10 @@ private BiConsumer<BufferedReader, Emitter<String>> fileConsumer()
 ```
 ---
 ### Parallélisme du traitement des Alertes
+<div style="text-align: left">
  @size[0.7em](Les points de parallélisme dans le batch de migration :) 
 
  @size[0.7em]( - Parallélisme inter-process : On peut migrer plusieurs comptes simultanément. Chaque thread sera responsable de la migration d'un compte.)  
  @size[0.7em]( - Parallélisme intra-process : La lecture et l'écriture des *UserObjects* peut être effectuée par deux threads indépendants.)
-
+</div>
  
