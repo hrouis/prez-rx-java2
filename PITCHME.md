@@ -171,7 +171,7 @@ just("Some String") // Computation
 +++
 @div[left-50]  
  @size[1.5em](Problème)  
- - Le batch de migration doit être implémenté en Java 6 ( à cause de la dépendance Xstream)
+@size[0.75em](Le batch de migration doit être implémenté en Java 6 à cause de la dépendance Xstream)
 @divend
 
 @div[right-50]  
