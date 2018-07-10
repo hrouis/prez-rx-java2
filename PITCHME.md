@@ -175,7 +175,7 @@ just("Some String") // Computation
 @div[right-50]
 ![weeping](assets/images/weeping.jpg)   
 
- +++
++++
  #### Problèmes  
  
   @size[0.7em](Les appels à Geohub en lecture et écriture sont bloquants.)
