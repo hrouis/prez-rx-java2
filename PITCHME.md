@@ -123,7 +123,7 @@ Cette opération modifie le thread d'exécution de tout les méthodes qui la suc
 just("Some string")  //UI
  .map(str -> str.length()) //UI
  .observeOn(Schedulers.computation) // changing the thread
- .map(length -> é * length) // Computation
+ .map(length -> 2 * length) // Computation
  .subscribe(number -> log.debug("Number {}", number)); // Computation
 ```
 
