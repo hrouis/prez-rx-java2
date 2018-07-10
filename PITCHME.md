@@ -285,14 +285,13 @@ private BiConsumer<BufferedReader, Emitter<String>> fileConsumer()
 +++
 ### PArallélisme inter-process 
 <div style="text-align: left">
-@size[1em] Utilisation de grpouBy et flatMap  
+@size[0.75em] Utilisation de grpouBy et flatMap  
 
 </div>
 
 ```java
 private int threadCount = Runtime.getRuntime().availableProcessors();
 
-public static void main (String[] args) {
 ExecutorService threadPoolExecutor = Executors.newFixedThreadPool(threadCount);
 Scheduler scheduler = Schedulers.from(threadPoolExecutor);
 
@@ -300,7 +299,7 @@ file.groupBy(groupIndex())
 .flatMap(mapper(scheduler))
 .doOnComplete(onComplete())
 .blockingIterable();
-}
+
 private Function<String, Integer> groupIndex()
 {
     return new Function<String, Integer>() {
@@ -313,4 +312,12 @@ private Function<String, Integer> groupIndex()
     };
 }
 ```  
+@[1-4](Création du Scheduler spécifique)
+@[6-9](La méthode groupBy utilisée pour générer N flux d'Observables et la la méthode flatMap utilisée pour transformer et paralléliser les flux)
+@[11-21]( méthode groupIndex qui implémente la méthode critère de sélection, ici une répartition itérative )
+
++++
+
+
+
 
