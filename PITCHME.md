@@ -282,3 +282,26 @@ private BiConsumer<BufferedReader, Emitter<String>> fileConsumer()
 - @size[0.7em](Parallélisme intra-process : La lecture et l'écriture des *UserObjects* peut être effectuée par deux threads indépendants.)
 </div>
  
++++
+### PArallélisme inter-process 
+<div style="text-align: left">
+@size[1em] Utilisation de grpouBy et flatMap
+```java
+file.groupBy(groupIndex())
+                .flatMap(deleteMapper(scheduler))
+                .doOnComplete(onComplete())
+                .blockingIterable();
+                
+private Function<String, Integer> groupIndex()
+{
+    return new Function<String, Integer>() {
+        @Override
+        public Integer apply(String s)
+        {
+            log.debug("key selector : {}", groupIndex.getAndIncrement() % threadCount);
+            return groupIndex.getAndIncrement() % threadCount;
+        }
+    };
+}
+``` 
+</div>
