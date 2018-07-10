@@ -52,6 +52,10 @@ img[alt=back-pressure] {
     height: 500px;
 }
 
+img[alt=logo] {
+    height: 400px;
+}
+
 /*
 ul {
   list-style-type: disc !important;
