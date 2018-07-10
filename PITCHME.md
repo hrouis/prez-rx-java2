@@ -187,7 +187,7 @@ just("Some String") // Computation
 @size[0.7em](La solution est d'encapsuler l'api bloquante dans une api *réactive*)
 </div>  
 
-| @size[1em](Type d'opération)            | @size[1em](Signature synchrone)   | @size[1em](Signature Rx) | @size[1em](Example d'utilisation) |
+| @size[0.7em](Type d'opération)            | @size[0.7em](Signature synchrone)   | @size[0.7em](Signature Rx) | @size[0.7em](Example d'utilisation) |
 |-----------------------------|-----------------------|--------------|------------------------|
 | @size[0.5em](Opération qui ne retroune aucun résultat)  | @size[0.5em](void x\(\)) | @size[0.5em](Completable x\(\)) | @size[0.5em](flush`(``)`) |
 | @size[0.5em](Opération qui retourne un seul résultat)   | @size[0.5em](T x`()`) | @size[0.5em](Single<T> x`()`) | @size[0.5em](get`()`) |
