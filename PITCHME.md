@@ -169,19 +169,21 @@ just("Some String") // Computation
    - @size[0.7em](Ecritre de l'UO dans Geohub.)
  
 +++
-#### Problèmes
 @div[left-50]
+#### Problèmes 
  - Le batch de migration doit être implémenté en Java 6 ( à cause de la dépendance Xstream)
 @divend
 @div[right-50]
+#### Solution
 ![weeping](assets/images/weeping.jpg)   
-
+@divend
 +++
- #### Problèmes  
- @div[left-100]
+ #### Problèmes et solutions
+
   @size[0.7em](Les appels à Geohub en lecture et écriture sont bloquants.)
   @size[0.7em](La solution est d'encapsuler l'api bloquante dans une api *réactive*)
- @divend
+
+
 +++
 ### Création d'un Objet Flowable
 to do 
