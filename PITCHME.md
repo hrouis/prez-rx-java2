@@ -105,6 +105,7 @@ entre ses composants afin de profiter de l'élasticité et  de la répartition d
 | @size[0.6em](*IO*)      | @size[0.6em](Utilisé pour les opération I/O  : requêtes réseau, opération FS)     |
 | @size[0.6em](*Computation *)       | @size[0.6em](Opération asynchrone qui retourne 0 ou 1 résultat) |
 | @size[0.6em](*NewThread *) | @size[0.6em](Opération asynchrone qui ne retourne aucun résultat. Indique la fin d'observation.) | 
++++
 | @size[0.6em](*Single *)  | @size[0.6em](Séquence de données sans contre-pression) |
 | @size[0.6em](*Immediate *)    | @size[0.6em](Séquence de données avec contre-pression) |
 | @size[0.6em](*Trampoline*)    | @size[0.6em](Séquence de données avec contre-pression) |
