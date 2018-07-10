@@ -194,6 +194,34 @@ just("Some String") // Computation
 | @size[0.4em](Opération qui retourne 0  *null* ou 1 résultat)    | @size[0.4em](T x) | @size[0.5em](Maybe<T> x ou Single<Optional<T>> x) | @size[0.4em](get) |
 
 +++
+@size[1em](DeveryGoWrapper)
+
+```java
+ /**
+     * Async call to uoGet.
+     * 
+     * @param name
+     * @return MayBe Observable with UserObject inside.
+     */
+    public Maybe<UserObject> getUserObject(final String name)
+    {
+        log.debug("getting uo from geohub.");
+        return Maybe.fromCallable(new Callable<UserObject>() {
+            @Override
+            public UserObject call()
+            {
+                try {
+                    return api.uoGet(name);
+                } catch (Exception e) {
+                    log.error("error while calling the Deverygo api for user {}", user.getULogin(), e);
+                    return null;
+                }
+            }
+        });
+    }
+```
+
++++  
 ### Création d'un Objet Flowable
 to do 
 
