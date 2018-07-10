@@ -128,16 +128,22 @@ just("Some String") // Computation
  
 ![groupBy](assets/images/groupBy.png)  
 
++++
+ ### Parallélisme avec flatMap et groupBy  
+ #### FlatMap
+ 
+![flatMap](assets/images/flatMap.png)  
+
 ---
 ### Migration des alertes avec RxJava2
 #### Process de migration : 
 
 +++
-### Création d'un Objet Flowable
+### Création d'un Objet Flowable
 to do 
 
 +++
-### Parallélisme du traitement des Alertes
+### Parallélisme du traitement des Alertes
 todo 
 
  

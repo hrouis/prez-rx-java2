@@ -40,6 +40,10 @@ img[alt=groupBy] {
     width: 400px;
 }
 
+img[alt=flatMap] {
+    width: 400px;
+}
+
 img[alt=ractive] {
     height: 400px;
 }
