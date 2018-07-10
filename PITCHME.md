@@ -169,11 +169,12 @@ just("Some String") // Computation
    - @size[0.7em](Ecritre de l'UO dans Geohub.)
  
 +++
-@div[left-50]
-#### Problèmes 
+@div[left-50]  
+#### Problème  
  - Le batch de migration doit être implémenté en Java 6 ( à cause de la dépendance Xstream)
 @divend
-@div[right-50]
+
+@div[right-50]  
 #### Solution
 ![weeping](assets/images/weeping.jpg)   
 @divend
