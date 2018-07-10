@@ -262,13 +262,14 @@ private BiConsumer<BufferedReader, Emitter<String>> fileConsumer()
 +++    
 ### Création d'un Objet Flowable
 ```java
-    private Callable<BufferedReader> fileReaderCallable(final String filePath)
+private Consumer<? super BufferedReader> fileReaderDisposer()
     {
-        return new Callable<BufferedReader>() {
+        return new Consumer<BufferedReader>() {
             @Override
-            public BufferedReader call() throws Exception
+            public void accept(BufferedReader bufferedReader) throws Exception
             {
-                return new BufferedReader(new FileReader(filePath));
+                log.debug("closing the file reader");
+                bufferedReader.close();
             }
         };
     }
@@ -285,7 +286,7 @@ private BiConsumer<BufferedReader, Emitter<String>> fileConsumer()
 +++
 ### Parallélisme inter-process 
 <div style="text-align: left">
-@size[0.75em] Utilisation de grpouBy et flatMap  
+@size[0.75em](Utilisation de grpouBy et flatMap)  
 
 </div>
 
@@ -350,5 +351,23 @@ private Function<GroupedFlowable<Integer, String>, Publisher<List<Integer>>> map
 @[7](Utilisation de la méthode observeOn pour lancer le traitement sur le scheduler)
 @[18](Lancer le traitement pour la ligne du fichier)
 
++++
+### Parallélisme intra-process
+<div style="text-align: left">
+@size[0.75em](La lecture et l'écriture de l'UO peut être menée par deux threads différents.) 
+</div>
 
+```java
+deveryGoReactiveWrapper.getUserObject("salertList").observeOn(Schedulers.io()).subscribe(
+      transformUserObject(deveryGoReactiveWrapper), handleError(user));
+```
 
+---
+#Exécution
+```log
+[pool-1-thread-4] Processing geohub user :  benfils
+[pool-1-thread-4] getting uo from geohub for user benfils : < name:salertList properties:{1499176675=< key:1499176675 value:<com.deveryware.deverygo.xmlrpc.sAlert.SAlert version="1"><alertName>test</alertName> ...
+RxCachedThreadScheduler-1 => benfils = < name:salertList_V2 properties:{1499176675=< key:1499176675 value:{"@class":"com.deveryware.deverygo.xmlrpc.sAlert.SAlert","age":20,"alertName":"test","calendar"...
+```  
+@[1-2](Thread provenant du scheduler spécifique)
+@[3](Thread du Scheduler IO)
