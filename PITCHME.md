@@ -219,7 +219,40 @@ just("Some String") // Computation
 
 +++  
 ### Création d'un Objet Flowable
-to do 
+
+```java
+  Flowable<String> file = Flowable.generate(fileReaderCallable(filePath), fileConsumer(), fileReaderDisposer());
+
+ private Callable<BufferedReader> fileReaderCallable(final String filePath)
+    {
+        return new Callable<BufferedReader>() {
+            @Override
+            public BufferedReader call() throws Exception
+            {
+                return new BufferedReader(new FileReader(filePath));
+            }
+        };
+    }
+ 
+private BiConsumer<BufferedReader, Emitter<String>> fileConsumer()
+{
+    return new BiConsumer<BufferedReader, Emitter<String>>() {
+        @Override
+        public void accept(BufferedReader bufferedReader, Emitter<String> stringEmitter) throws Exception
+        {
+            final String line = bufferedReader.readLine();
+            if (line != null) {
+                log.debug("emitting the next line");
+                stringEmitter.onNext(line);
+            } else {
+                log.debug("emitting on complete event");
+                stringEmitter.onComplete();
+            }
+        }
+    };
+}
+```
+
 
 +++
 ### Parallélisme du traitement des Alertes
