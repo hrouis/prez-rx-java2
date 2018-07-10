@@ -197,12 +197,6 @@ just("Some String") // Computation
 @size[1em](DeveryGoWrapper)
 
 ```java
- /**
-     * Async call to uoGet.
-     * 
-     * @param name
-     * @return MayBe Observable with UserObject inside.
-     */
     public Maybe<UserObject> getUserObject(final String name)
     {
         log.debug("getting uo from geohub.");
