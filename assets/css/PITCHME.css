@@ -56,6 +56,9 @@ img[alt=logo] {
     height: 300px;
 }
 
+img[alt=weeping] {
+    height: 300px;
+}
 /*
 ul {
   list-style-type: disc !important;
