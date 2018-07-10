@@ -217,11 +217,11 @@ just("Some String") // Computation
 @[6-13](Appel de l'api Deverygo et récupération du UserObject)
 @[1-4](Encapsulation de l'appel asynchrone par la création d'une Observable du type Maybe)
 
-+++  
+--- 
 ### Création d'un Objet Flowable
 
 ```java
-  Flowable<String> file = Flowable.generate(fileReaderCallable(filePath), fileConsumer(), fileReaderDisposer());
+ Flowable<String> file = Flowable.generate(fileReaderCallable(filePath), fileConsumer(), fileReaderDisposer());
 
  private Callable<BufferedReader> fileReaderCallable(final String filePath)
     {
@@ -233,7 +233,12 @@ just("Some String") // Computation
             }
         };
     }
- 
+```
+
++++    
+### Création d'un Objet Flowable
+
+```java
 private BiConsumer<BufferedReader, Emitter<String>> fileConsumer()
 {
     return new BiConsumer<BufferedReader, Emitter<String>>() {
@@ -252,8 +257,20 @@ private BiConsumer<BufferedReader, Emitter<String>> fileConsumer()
     };
 }
 ```
-
-
++++    
+### Création d'un Objet Flowable
+```java
+    private Callable<BufferedReader> fileReaderCallable(final String filePath)
+    {
+        return new Callable<BufferedReader>() {
+            @Override
+            public BufferedReader call() throws Exception
+            {
+                return new BufferedReader(new FileReader(filePath));
+            }
+        };
+    }
+```
 +++
 ### Parallélisme du traitement des Alertes
 todo 
