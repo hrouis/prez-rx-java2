@@ -102,17 +102,16 @@ entre ses composants afin de profiter de l'élasticité et  de la répartition d
 
 | Type                        | Cas d'usage                                                    |
 |-----------------------------|----------------------------------------------------------------|
-| @size[0.6em](*IO*)      | @size[0.6em](Utilisé pour les opération I/O  : requêtes réseau, opération FS)     |
-| @size[0.6em](*Computation *)       | @size[0.6em](Opération asynchrone qui retourne 0 ou 1 résultat) |
-| @size[0.6em](*NewThread *) | @size[0.6em](Opération asynchrone qui ne retourne aucun résultat. Indique la fin d'observation.) | 
+| @size[0.5em](*IO*)      | @size[0.5em](Utilisé pour les opération I/O  : requêtes réseau, opération FS)     |
+| @size[0.5em](*Computation *)       | @size[0.5em](Le nombre de thread dépend du nombre de coeurs de la machine (mobile, serveur ...), optimisé pour les calculs rapides.|
+| @size[0.5em](*NewThread *) | @size[0.5em](Création d'un nouveau thread sans recyclage, à utilser avec modération.) | 
 +++  
 
 | Type                        | Cas d'usage                                                    |
 |-----------------------------|----------------------------------------------------------------|
-| @size[0.6em](*Single *)  | @size[0.6em](Séquence de données sans contre-pression) |
-| @size[0.6em](*Immediate *)    | @size[0.6em](Séquence de données avec contre-pression) |
-| @size[0.6em](*Trampoline*)    | @size[0.6em](Séquence de données avec contre-pression) |
-| @size[0.6em](*Executor Scheduler*)    | @size[0.6em](Séquence de données avec contre-pression) |
+| @size[0.5em](*Single *)  | @size[0.5em](Crée un seul thread) |
+| @size[0.5em](*Trampoline*)    | @size[0.5em](Exécute le code sur le thread courant) |
+| @size[0.5em](*Executor Scheduler*)    | @size[0.5em](Scheduler où on peut configurer la taille du pool de thread. ) |
 
 
 +++
