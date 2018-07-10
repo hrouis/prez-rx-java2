@@ -46,9 +46,10 @@ li {
 }
 */
 
-body {
+.markdown-preview.markdown-preview {
     font-size: 0.3em;
 }
+
 #gp-logo img {
     max-height: 1.5em;
     max-width: none;
@@ -65,7 +66,7 @@ body {
 
 .reveal pre {
     width: 100%;
-    box-shadow : none;
+    box-shadow: none;
 }
 
 .reveal pre code {
@@ -77,5 +78,3 @@ body {
 .reveal .slides section .code-presenting-annotation {
     color: gray;
 }
-
-.markdown-preview.markdown-preview { p, ul, ol {font-size: 0.5em;} }
