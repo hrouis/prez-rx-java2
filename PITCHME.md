@@ -64,7 +64,7 @@ userObservable.subscribe(new Subscriber<User>(){
 });
 ```
 ---
-## Le Manifeste Réactif  
+### Le Manifeste Réactif  
 https://www.reactivemanifesto.org/fr
 
 - Disponible : Le système répond rapidement en toutes circonstances.
@@ -76,17 +76,17 @@ https://www.reactivemanifesto.org/fr
 - Orientés messages (message-driven) : Le système utilise le passage de message asynchrones
 entre ses composants afin de profiter de l'élasticité et  de la répartition des charges en appliquant la contre-pression ( back-pressure )
 +++
-## Reactive Streams
+### Reactive Streams
 @size[0.4em](Une initiative qui essaye de normaliser le traitement asynchrone des flux avec une contre-pression non bloquante.)  
 @size[0.4em](RxJava2 implémente cette spécification.)
 
 ![ractive](assets/images/reactive-streams-communication-flow.png)
 +++
-## Contre Pression (Back-pressure)
+### Contre Pression (Back-pressure)
 ![back-pressure](assets/images/backpressure.jpg)
 
 ---
-## Types d'Observables
+### Types d'Observables
 
 | Type          | Cas d'usage                                       |
 |---------------|---------------------------------------------------|
@@ -97,7 +97,7 @@ entre ses composants afin de profiter de l'élasticité et  de la répartition d
 | *Flowable*    | Séquence de données avec contre-pression |
 
 ---
-## Parallélisme dans RxJava 2.0
+### Parallélisme dans RxJava 2.0
 #### ObserveOn:
 Cette opération modifie le thread d'exécution de tout les méthodes qui la succèdent.  
 
@@ -114,7 +114,7 @@ just("Some string")  //UI
 @[4-5](Exécution du code dans le thread de calcul)  
 
 +++
-## Parallélisme dans RxJava 2.0
+### Parallélisme dans RxJava 2.0
 #### SubscribeOn:
 Cette opération affecte le thread responsable de la souscription à l'observable.
 ```java
@@ -125,21 +125,21 @@ just("Some String") // Computation
   .subscribe(number -> Log.d("", "Number " + number));// Computation
  ```
 +++
- ## Parallélisme avec flatMap et groupBy  
+ ### Parallélisme avec flatMap et groupBy  
  #### GroupBy
  
 ![groupBy](assets/images/groupBy.png)
 
 ---
-## Migration des alertes avec RxJava2
+### Migration des alertes avec RxJava2
 #### Process de migration : 
 
 +++
-## Création d'un Objet Flowable
+### Création d'un Objet Flowable
 to do 
 
 +++
-## Parallélisme du traitement des Alertes
+### Parallélisme du traitement des Alertes
 todo 
 
  
