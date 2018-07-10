@@ -6,7 +6,7 @@ logo : assets/images/logo.png
 
 theme-override : assets/css/PITCHME.css
 
-transition : none
+transition : fade
 
 highlight : ir-black
 
