@@ -20,7 +20,7 @@ service.getData(dataA -> {
  * Future : Peuvent bloquer le code trop tôt ( appel à la méthode get) 
 +++
 
-@size[0.4em](RxJava est basé sur le patron de conception Observateur : L'objet observé envoie un signal à des composants qui jouent le rôle d'observateurs. En cas de notification, les observateurs effectuent alors l'action adéquate en fonction des informations qui parviennent depuis les modules qu'ils observent.)  
+@size[0.5em](RxJava est basé sur le patron de conception Observateur : L'objet observé envoie un signal à des composants qui jouent le rôle d'observateurs. En cas de notification, les observateurs effectuent alors l'action adéquate en fonction des informations qui parviennent depuis les modules qu'ils observent.)  
  
 ![observer_pattern](assets/images/observer.png)   
 
@@ -86,9 +86,9 @@ entre ses composants afin de profiter de l'élasticité et  de la répartition d
 ---
 ### Types d'Observables
 
-| Type          | Cas d'usage                                       |
-|---------------|---------------------------------------------------|
-| *Single*      | Opération asynchrone qui retourne 1 résultat      |
+| Type                        | Cas d'usage                                                    |
+|-----------------------------|----------------------------------------------------------------|
+| @size[0.5em](*Single*)      | @size[0.5em](Opération asynchrone qui retourne 1 résultat)     |
 | *Maybe*       | Opération asynchrone qui retourne 0 ou 1 résultat |
 | *Completable* | Opération asynchrone qui ne retourne aucun résultat. Indique la fin d'observation. | 
 | *Observable*  | Séquence de données sans contre-pression |
