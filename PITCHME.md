@@ -127,7 +127,7 @@ just("Some String") // Computation
  #### GroupBy
  toto titi 
  
----?image=assets/images/groupBy.png&size=50%
+---?image=assets/images/groupBy.png&size=contain
 
 ---
 ### Migration des alertes avec RxJava2
