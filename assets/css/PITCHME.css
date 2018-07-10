@@ -36,6 +36,7 @@
     font-size: 50% !important;
 }
 
+img[alt=groupBy] { width: 200px;}
 /*
 ul {
   list-style-type: disc !important;

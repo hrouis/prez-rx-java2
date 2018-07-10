@@ -126,7 +126,8 @@ just("Some String") // Computation
  ### Parallélisme avec flatMap et groupBy  
  #### GroupBy
  
-<img src="assets/images/groupBy.png" alt="groupBy" width="200px"/>
+![groupBy](assets/images/groupBy.png)  
+
 ---
 ### Migration des alertes avec RxJava2
 #### Process de migration : 
