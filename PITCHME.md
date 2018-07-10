@@ -146,14 +146,14 @@ just("Some String") // Computation
 +++
  ### Parallélisme avec flatMap et groupBy  
  #### GroupBy
- Cette méthode regroupe les éléments émis par un *Observable* suivant un critère de sélection spécifique  
+ @size[0.7em](Cette méthode regroupe les éléments émis par un *Observable* suivant un critère de sélection spécifique)  
  
 ![groupBy](assets/images/groupBy.png)  
 
 +++
  ### Parallélisme avec flatMap et groupBy  
  #### FlatMap
- 
+  @size[0.7em]()FlatMap prends chaque élément de chaque stream et  lui applique une transformation ( la partie *map* ) , ensuite elle va combiner tous les streams dans un stream destination ( la partie *flat* ) ) 
 ![flatMap](assets/images/flatMap.png)  
 
 ---
