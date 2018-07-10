@@ -22,7 +22,7 @@
     border-radius: 15px;
     color: #eee !important;
     font-weight: normal !important;
-    line-height: 1.2 !important;
+    line-height: 1 !important;
     letter-spacing: -0.03em !important;
     font-family: "Montserrat", Impact, sans-serif !important;
 }
@@ -67,7 +67,7 @@ li {
 
 .reveal pre code {
     font-size: 1.2em;
-    line-height: 0.5em;
+    line-height: 1.2em;
     border-radius: 10px;
 }
 
