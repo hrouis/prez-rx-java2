@@ -78,7 +78,6 @@ entre ses composants afin de profiter de l'élasticité et  de la répartition d
 +++
 ## Reactive Streams
 @size[0.6em](Une initiative qui essaye de normaliser le traitement asynchrone des flux avec une contre-pression non bloquante.)  
-
 @size[0.6em](RxJava2 implémente cette spécification.)
 
 ![ractive](assets/images/reactive-streams-communication-flow.png)
