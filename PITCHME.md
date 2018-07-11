@@ -374,4 +374,5 @@ RxCachedThreadScheduler-1 => benfils = < name:salertList_V2 properties:{14991766
 @[3](Thread du Scheduler IO)
 
 ---
+![joke](assets/images/joke.jpeg)
 ## Merci
