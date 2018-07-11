@@ -372,8 +372,8 @@ RxCachedThreadScheduler-4 => dloctrung = < name:salertList_V2 properties:{152957
 
 
 ```  
-@[1-2](Threads provenant du scheduler spécifique)
-@[3](Threads du Scheduler IO)
+@[1-2,4-5](Threads provenant du scheduler spécifique)
+@[3,6](Threads du Scheduler IO)
 
 ---
 ![joke](assets/images/joke.jpeg)
