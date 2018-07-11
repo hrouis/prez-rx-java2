@@ -364,6 +364,7 @@ deveryGoReactiveWrapper.getUserObject("salertList").observeOn(Schedulers.io()).s
 
 ---
 ###Exécution
+
 ```less
 [pool-1-thread-4] Processing geohub user :  benfils
 [pool-1-thread-4] getting uo from geohub for user benfils : < name:salertList properties:{1499176675=< key:1499176675 value:<com.deveryware.deverygo.xmlrpc.sAlert.SAlert version="1"><alertName>test</alertName> ...
@@ -371,3 +372,6 @@ RxCachedThreadScheduler-1 => benfils = < name:salertList_V2 properties:{14991766
 ```  
 @[1-2](Thread provenant du scheduler spécifique)
 @[3](Thread du Scheduler IO)
+
+---
+###Merci
