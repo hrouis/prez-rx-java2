@@ -365,9 +365,15 @@ deveryGoReactiveWrapper.getUserObject("salertList").observeOn(Schedulers.io()).s
 [pool-1-thread-4] Processing geohub user :  benfils
 [pool-1-thread-4] getting uo from geohub for user benfils : < name:salertList properties:{1499176675=< key:1499176675 value:<com.deveryware.deverygo.xmlrpc.sAlert.SAlert version="1"><alertName>test</alertName> ...
 RxCachedThreadScheduler-1 => benfils = < name:salertList_V2 properties:{1499176675=< key:1499176675 value:{"@class":"com.deveryware.deverygo.xmlrpc.sAlert.SAlert","age":20,"alertName":"test","calendar"...
+************
+[pool-1-thread-3] Processing geohub user :  dloctrung
+[pool-1-thread-3] getting uo from geohub for user dloctrung:  < name:salertList properties:{1529570339=< key:1529570339 value:<com.deveryware.deverygo.xmlrpc.sAlert.SAlert version="1"><alertName>ooo</alertName>...
+RxCachedThreadScheduler-4 => dloctrung = < name:salertList_V2 properties:{1529570339=< key:1529570339 value:{"@class":"com.deveryware.deverygo.xmlrpc.sAlert.SAlert","age":20,"alertName":"ooo"...
+
+
 ```  
-@[1-2](Thread provenant du scheduler spécifique)
-@[3](Thread du Scheduler IO)
+@[1-2](Threads provenant du scheduler spécifique)
+@[3](Threads du Scheduler IO)
 
 ---
 ![joke](assets/images/joke.jpeg)
