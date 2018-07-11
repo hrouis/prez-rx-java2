@@ -189,11 +189,7 @@ just("Some String") // Computation
 @size[0.7em](La solution est d'encapsuler l'api bloquante dans une api *réactive*)
 </div>  
 
-| @size[0.4em](Type d'opération)                                      | @size[0.4em](Signature synchrone)   | @size[0.4em](Signature Rx) | @size[0.4em](Example d'utilisation) |
-|---------------------------------------------------------------------|-----------------------|--------------|------------------------|
-| @size[0.4em](Opération qui ne retroune aucun résultat)  | @size[0.4em](void x) | @size[0.4em](Completable x) | @size[0.4em](flush) |
-| @size[0.4em](Opération qui retourne un seul résultat)   | @size[0.4em](T x) | @size[0.5em](Single<T> x) | @size[0.4em](get) |
-| @size[0.4em](Opération qui retourne 0  *null* ou 1 résultat)    | @size[0.4em](T x) | @size[0.5em](Maybe<T> x ou Single<Optional<T>> x) | @size[0.4em](get) |
+![rxapi](assets/images/rxapi.bmp)
 
 +++
 @size[1em](DeveryGoWrapper)
